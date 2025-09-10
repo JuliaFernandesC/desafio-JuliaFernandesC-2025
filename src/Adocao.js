@@ -22,20 +22,12 @@ class Adocao {
         } else if(p2){
             pessoa2.adota(animal);
             res = 'pessoa 2';
-            if (res === 'pessoa 2') pessoa2.bloqueia(animal);
+            if(animal.ehGato()) pessoa2.bloqueia(animal);
         } else {
             res = 'abrigo'
         }
 
         return res;
     }
-
-    /*
-    bloqueia(animal, pessoa){
-        pessoa.brinquedos = pessoa.brinquedos.filter(
-            brinquedo => !animal.brinquedos.includes(brinquedo)
-        );
-    }
-    */
 }
 export { Adocao as Adocao};

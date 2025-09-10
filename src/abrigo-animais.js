@@ -6,6 +6,8 @@ import { Validador } from './Validador.js';
 class AbrigoAnimais {
 
   encontraPessoas(brinquedosP1, brinquedosP2, ordemA) {
+    // inicializar o resgistro de animais 
+    Registro.registra(); 
     // validar os brinquedos 
     const validacao = Validador.valida(brinquedosP1, brinquedosP2, ordemA);
     if(validacao.erro) return {erro: validacao.erro}; // retorna exatamente o tipo de erro que deu
@@ -25,7 +27,7 @@ class AbrigoAnimais {
     for(const animal of animais){
       //aplicar as regras de adocao
       const destino = Adocao.regras(pessoa1, pessoa2, animal);
-      resultado.push(`${animal.nome}' - ${destino}`); // colocar a lista no formato solicitado 
+      resultado.push(`${animal.nome} - ${destino}`); // colocar a lista no formato solicitado 
     } 
 
     // ordenar a lista 
