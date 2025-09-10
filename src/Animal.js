@@ -6,12 +6,8 @@ class Animal {
     }
 
     ehGato(){
-        return this.especie.toLowerCase() === 'gato';
-    }
-
-    ehBrinquedo(brinquedo){
-        return this.brinquedos.includes(brinquedo);
+        return this.tipo.toLowerCase() === 'gato';
     }
 }
 
-export { Animal };
+export { Animal as Animal};
